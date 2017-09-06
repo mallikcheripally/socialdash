@@ -1,0 +1,28 @@
+@import "partials/colors";
+@import "essential";
+
+.body-container {
+  .signup-container {
+    width: 400px;
+    height: 600px;
+    margin: calc((100vh - 600px)/2) auto;
+    padding: 50px 20px;
+    border-radius: 4px;
+    background-color: $white;
+    box-shadow: $button-shadow-hover;
+    position: relative;
+    a {
+      svg {
+        margin: 20px 98.5px;
+      }
+    }
+    .button-box {
+      text-align: center;
+      a.btn {
+        margin-top: 10px;
+        background-color: $light-blue-700;
+        color: $white;
+      }
+    }
+  }
+}

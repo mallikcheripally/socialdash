@@ -1,0 +1,101 @@
+@import "partials/colors";
+@import "dash-essential";
+@import "essential";
+
+.dashboard-container {
+  .facebook-container {
+    width: 800px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    .feed-box {
+      width: 360px;
+      min-height: 300px;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: $card-shadow;
+      overflow: hidden;
+      display: inline-block;
+      //float: left;
+      margin: 0 80px 20px 0;
+      transition: box-shadow 0.3s ease;
+      &:hover {
+        box-shadow: $card-shadow-hover;
+        .image .fullscreen-overlay {
+          background-color: transparentize($black, 0.6);
+        }
+      }
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+      .image {
+        width: 100%;
+        height: 202px;
+        position: relative;
+        picture source, img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+        .fullscreen-overlay {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: transparentize($black, 1);
+          transition: all 0.3s ease;
+        }
+        .post-menu {
+          //width: 100%;
+          //height: 100%;
+          position: absolute;
+          top: 10px;
+          right: 0;
+          a.post-dropdown {
+            display: block;
+            color: $white;
+          }
+          .dropdown-content  {
+            li {
+              min-height: 30px;
+              a {
+                padding: 4px 10px;
+                height: 30px;
+                line-height: 22px;
+                font-size: 0.9em;
+                color: $blue-grey-700;
+              }
+            }
+          }
+        }
+      }
+      .content {
+        width: 100%;
+        min-height: 140px;
+        background-color: $white;
+        padding: 15px 15px 5px 15px;
+        .post-message {
+          color: $blue-grey-700;
+        }
+        .divider {
+          margin: 5px 0;
+        }
+        .actions {
+          text-align: right;
+          a {
+            margin-left: 10px;
+            color: $grey-600;
+            font-size: 0.95em;
+            &:hover, &:focus {
+              color: $light-blue-700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
